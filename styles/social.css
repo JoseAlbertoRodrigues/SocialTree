@@ -20,7 +20,10 @@ img {
 
 /*====  VARIABLES ============================ */
 :root {
-    --header-height: 4.5rem;
+    /* --header-height: 4.5rem; */
+
+    --body-bg-color: #FAF7FD;
+    --purple: #BB99DD;
   
     /* colors */
     --hue: 227;
@@ -39,7 +42,7 @@ img {
   
     --title-font: 'Poppins', sans-serif;
     --body-font: 'DM Sans', sans-serif;
-  }
+}
 
 /*===  BASE ============================ */
 html {
@@ -60,13 +63,42 @@ body {
     -webkit-font-smoothing: auto;
 }
 
+main {
+    /* background: var(--body-bg-color); */
+    background: pink;
+    width: 414px;
+    margin: 0 auto;
+}
+
 /*====  LAYOUT ============================ */
 .container {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin-left: 2.75rem;
+    margin-right: 2.75rem;
 }
 
 .grid {
     display: grid;
-    /* gap: 2rem; */
+    gap: 2rem;
+}
+
+/*====  PROFILE ============================ */
+#profile {
+    padding-top: 7.875rem;
+    text-align: center;
+}
+
+#profile .image {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+}
+
+#profile .image img {
+    border-radius: 100%;
+    padding: 5px;
+    border: 3px solid var(--purple);
+}
+
+#profile .person a {
+    color: var(--purple);
 }
