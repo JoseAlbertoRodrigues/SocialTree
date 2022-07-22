@@ -22,20 +22,22 @@ img {
 :root {
     /* --header-height: 4.5rem; */
 
-    --body-bg-color: #FAF7FD;
-    --purple: #BB99DD;
+    /* --body-bg-color: hsl(270, 60%, 98%); */
+    /* --purple: #BB99DD; */
+    /* --purple: hsl(270, 50%, 73%); */
   
     /* colors */
-    --hue: 227;
+    --hue: 270;
     /* HSL color mode */
-    --base-color: hsl(var(--hue) 36% 57%);
+    --body-color: hsl(var(--hue) 60% 98%); /*body-bg-color*/
+    --base-color: hsl(var(--hue) 50% 73%); /*purple*/
+
     --base-color-second: hsl(var(--hue) 65% 88%);
     --base-color-alt: hsl(var(--hue) 57% 53%);
     --title-color: hsl(var(--hue) 41% 10%);
     --text-color: hsl(0 0% 46%);
     --text-color-light: hsl(0 0% 98%);
-    --body-color: hsl(0 0% 98%);
-  
+      
     /* fonts */
     --title-font-size: 1.875rem;
     --subtitle-font-size: 1rem;
@@ -50,22 +52,43 @@ html {
 }
 
 body {
-    font: 400 1rem var(--body-font);
+    font: 300 1rem var(--title-font);
     color: var(--text-color);
-    background: var(--body-bg-color);
+    background: var(--body-color);
     -webkit-font-smoothing: antialiased;
-    font-weight: bolder;
 }
 
 .title {
-    font: 600 var(--title-font-size) var(--body-font);
+    font: 600 var(--title-font-size) var(--title-font);
     color: var(--text-color);
     -webkit-font-smoothing: auto;
 }
 
+.button {
+    height: 3rem;
+    width: 100%;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: var(--body-color);
+    color: var(--base-color);
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+    font: 600 1rem var(--body-font);
+    transition: background 0.3s; 
+
+    border: 2px solid var(--base-color);
+}
+  
+.button:hover {
+    background: var(--base-color-alt);
+}
+
 main {
     /* background: var(--body-bg-color); */
-    background: pink;
+    /* background: pink; */
     width: 414px;
     margin: 0 auto;
 }
@@ -78,7 +101,7 @@ main {
 
 .grid {
     display: grid;
-    gap: 2rem;
+    gap: 1.1rem;
 }
 
 /*====  PROFILE ============================ */
@@ -96,9 +119,24 @@ main {
 #profile .image img {
     border-radius: 100%;
     padding: 5px;
-    border: 3px solid var(--purple);
+    border: 3px solid var(--base-color);
 }
 
 #profile .person a {
-    color: var(--purple);
+    color: var(--base-color);
 }
+
+/*====  LINKS ============================ */
+#links {
+    margin-top:  2rem;
+    background: grey;
+}
+
+/* #links div {
+    background: goldenrod;
+} */
+
+/* #links div a {
+    display: block;
+    text-align: center;
+} */
