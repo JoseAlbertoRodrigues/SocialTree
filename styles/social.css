@@ -53,14 +53,14 @@ html {
 
 body {
     font: 300 1rem var(--title-font);
-    color: var(--text-color);
+    color: var(--base-color);
     background: var(--body-color);
     -webkit-font-smoothing: antialiased;
 }
 
 .title {
     font: 600 var(--title-font-size) var(--title-font);
-    color: var(--text-color);
+    color: var(--base-color);
     -webkit-font-smoothing: auto;
 }
 
@@ -87,10 +87,11 @@ body {
 }
 
 main {
-    /* background: var(--body-bg-color); */
-    /* background: pink; */
+    background: var(--body-color);
     width: 414px;
     margin: 0 auto;
+
+    padding: 7.875rem 0 9.875rem;
 }
 
 /*====  LAYOUT ============================ */
@@ -106,7 +107,6 @@ main {
 
 /*====  PROFILE ============================ */
 #profile {
-    padding-top: 7.875rem;
     text-align: center;
 }
 
@@ -129,14 +129,23 @@ main {
 /*====  LINKS ============================ */
 #links {
     margin-top:  2rem;
-    background: grey;
 }
 
-/* #links div {
-    background: goldenrod;
-} */
+/*====  SOCIAL ============================ */
+#social {
+    margin-top: 4.25rem;
+}
 
-/* #links div a {
-    display: block;
-    text-align: center;
-} */
+#social .social {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#social .social a {
+    align-items: center;
+}
+
+#social .social a i {
+    font-size: 1.5rem;
+    color: var(--base-color);
+}
