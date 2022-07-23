@@ -58,12 +58,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-.title {
-    font: 600 var(--title-font-size) var(--title-font);
-    color: var(--base-color);
-    -webkit-font-smoothing: auto;
-}
-
 .button {
     height: 3rem;
     width: 100%;
@@ -134,18 +128,63 @@ main {
 /*====  SOCIAL ============================ */
 #social {
     margin-top: 4.25rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 #social .social {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #social .social a {
+    display: flex;
     align-items: center;
+
+    border-radius: 2px;
 }
 
 #social .social a i {
     font-size: 1.5rem;
     color: var(--base-color);
+}
+
+/* linkedin */
+#social .social a i:hover {
+    color: white
+}
+
+/* twitter */
+#social .social a:hover:nth-child(1) {
+    background: #00AFEE;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* email */
+#social .social a:hover:nth-child(2) {
+    background: #F5C244;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* instagram */
+#social .social a:hover:nth-child(3) {
+    background: #3f729b;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* linkedin */
+#social .social a:hover:nth-child(4) {
+    background: #0E76A8;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* github */
+#social .social a:hover:nth-child(5) {
+    background: #171515;
+    padding: 5px;
+    border-radius: 10px;
 }
